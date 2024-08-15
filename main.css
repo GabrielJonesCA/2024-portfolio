@@ -1,0 +1,119 @@
+/* main.css */
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background: linear-gradient(to top, #00dbc9, #1c0e3d);*/
+    background: #141414;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 0px; /* Space for side header */
+    padding-top: 60px; /* Space for the navbar */
+    box-sizing: border-box;
+}
+
+nav.navbar {
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    background: #141414; /* Solid gradient background */
+    color: white;
+    z-index: 1000; /* Ensures it is above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Height of the navbar */
+    overflow: hidden; /* Ensure no overflow issues */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative; /* Ensures it stacks above the progress bar */
+    z-index: 1010; /* Stacks the text above the progress bar */
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding:  20px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.9s, color 0.9s;
+}
+
+.nav-list a:hover {
+    color: #141414;
+    background-color: rgba(255, 36, 54); 
+    font-size: 20px;
+    font-weight: bold;/* Text color on hover */
+}
+
+/* Progress bar styling */
+.progress-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #00dbc9; /* Solid red color */
+    width: 0; /* Start with no width */
+    z-index: 1000; /* Positioned behind the text but above other content */
+    transition: width 0.3s ease; /* Smooth transition for width */
+    pointer-events: none; /* Ensures the progress bar does not block interaction with navbar items */
+}
+
+header.side-header {
+    position: fixed; /* Fixes the header to the side */
+    top: 60px;
+    left: 0;
+    width: 250px; /* Adjust width as needed */
+    height: 100%; /* Full height */
+    background: rgba(255, 255, 255, 0); /* Semi-transparent dark background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    z-index: 900; /* Ensure the sidebar is below the navbar */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the image-text-container */
+}
+
+
+.name {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 50px; /* Adjust size for side header */
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    margin-left: 270px; /* Adjust margin to account for the sidebar */
+    margin-top: 60px; /* Adjust margin to account for the navbar */
+}
