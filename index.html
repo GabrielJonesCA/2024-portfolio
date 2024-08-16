@@ -3,50 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Navbar with Scroll Effect</title>
+    <title>Gabriel Jones Portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="progress-bar" id="progress-bar"></div>
-        <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="side-header">
+    <header>
         <div class="header-content">
-            <div class="image-text-container">
-                
-                <p class="name">Gabriel <br><strong>JONES</strong></p>
+            <h1>Gabriel<br>JONES</h1>
+            <div class="header-info-wrapper">
+                <h2>Front-End <br>Developer</h2>
+                <div class="social-icons">
+                    <!-- LinkedIn icon with link -->
+                    <a href="https://www.linkedin.com/in/gabrieljonesca/" target="_blank">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <!-- GitHub icon with link -->
+                    <a href="https://github.com/GabrielJonesCA" target="_blank">
+                        <img src="img/github-icon.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
+        </div>
+        <!-- Portrait image and square behind it in the same container -->
+        <div class="portrait-container">
+            <div class="square-behind"></div>
+            <img src="img/Face.png" alt="portrait" class="portrait">
         </div>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Home</h1>
-            <p>Welcome to the homepage.</p>
-            <img src="img/test.png" alt="test">
-        </section>
-        <section id="services">
-            <h1>Services</h1>
-            <p>Details about services.</p>
-            <img src="img/test.png" alt="test">
-        </section>
-        <section id="about">
-            <h1>About</h1>
-            <p>Information about us.</p>
-            <img src="img/test.png" alt="test">
-        </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>Contact information.</p>
-            <img src="img/test.png" alt="test">
-        </section>
+        <!-- Your content goes here -->
     </main>
 
     <script src="main.js"></script>

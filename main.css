@@ -4,116 +4,97 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to top, #00dbc9, #1c0e3d);*/
     background: #141414;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-left: 0px; /* Space for side header */
-    padding-top: 60px; /* Space for the navbar */
     box-sizing: border-box;
 }
 
-nav.navbar {
-    position: fixed; /* Keeps the navbar fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width of the viewport */
-    background: #141414; /* Solid gradient background */
-    color: white;
-    z-index: 1000; /* Ensures it is above other content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px; /* Height of the navbar */
-    overflow: hidden; /* Ensure no overflow issues */
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-}
-
-.nav-list {
-    list-style: none;
+h1 {
+    font-family: "Righteous", sans-serif;
+    color: #00e9dc;
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 1.1;
     margin: 0;
-    padding: 0;
+    text-align: right; /* Align text to the left */
+}
+
+header {
     display: flex;
-    position: relative; /* Ensures it stacks above the progress bar */
-    z-index: 1010; /* Stacks the text above the progress bar */
-}
-
-.nav-list li {
-    margin: 0;
-}
-
-.nav-list a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding:  20px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: background-color 0.9s, color 0.9s;
-}
-
-.nav-list a:hover {
-    color: #141414;
-    background-color: rgba(255, 36, 54); 
-    font-size: 20px;
-    font-weight: bold;/* Text color on hover */
-}
-
-/* Progress bar styling */
-.progress-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background: #00dbc9; /* Solid red color */
-    width: 0; /* Start with no width */
-    z-index: 1000; /* Positioned behind the text but above other content */
-    transition: width 0.3s ease; /* Smooth transition for width */
-    pointer-events: none; /* Ensures the progress bar does not block interaction with navbar items */
-}
-
-header.side-header {
-    position: fixed; /* Fixes the header to the side */
-    top: 60px;
-    left: 0;
-    width: 250px; /* Adjust width as needed */
-    height: 100%; /* Full height */
-    background: rgba(255, 255, 255, 0); /* Semi-transparent dark background */
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    overflow-y: auto; /* Allows scrolling if content overflows */
-    z-index: 900; /* Ensure the sidebar is below the navbar */
+    justify-content: center; /* Center everything horizontally */
+    padding: 60px 20px 20px 20px; /* Extra space at the top of the page */
+    background-color: #141414;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end; /* Align text to the right within the column */
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: -180px; /* Add space between text and image */
 }
 
-.image-text-container {
+.portrait-container {
+    position: relative;
+    top: -60px;
+     /* Relative position so child elements can be positioned absolutely */
+}
+
+.portrait {
+    width: 350px; /* Make the image larger */
+    height: 350px;
+    object-fit: cover;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Adding shadow to separate from the background */
+    position: relative; /* Ensure it's above the square */
+    z-index: 2; /* Ensure the image is on top */
+    margin-top: 150px; /* Lower the image slightly */
+}
+
+/* The square behind the image */
+.square-behind {
+    position: absolute;
+    width: 350px; /* Larger to match the new image size */
+    height: 350px;
+    background-color: #00dbc9; /* The color of the square */
+    top: 135px; /* Offset to the top */
+    right: -15px; /* Offset to the right */
+    z-index: 1; /* Ensure it's behind the image */
+}
+
+.header-info-wrapper {
+    position: relative;
+    left: -80px; /* Move this section 200px to the left */
+}
+
+header h2 {
+    font-family: "Outfit", sans-serif;
+    color: white; /* Keep the color white */
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; /* Space below the image-text-container */
+    justify-content: center;
+    margin-top: 10px;
 }
 
-
-.name {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
-    font-size: 50px; /* Adjust size for side header */
-    text-align: center;
+.social-icons img {
+    width: 40px; /* Uniform size for both icons */
+    height: 40px;
+    margin: 0 15px; /* Space between the icons */
+    display: inline-block;
+    border-radius: 50%; /* Make the icons circular */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
-main {
-    padding: 20px;
-    text-align: center;
-    margin-left: 270px; /* Adjust margin to account for the sidebar */
-    margin-top: 60px; /* Adjust margin to account for the navbar */
+/* Hover effect for both GitHub and LinkedIn icons */
+.social-icons img:hover {
+    box-shadow: 0 0 15px #00dbc9; /* Add a circular glow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+    border-radius: 50%; /* Ensure the shadow follows the circular shape */
 }
