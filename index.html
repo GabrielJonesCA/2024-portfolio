@@ -8,6 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+
+    <script>
+        function isMobileDevice() {
+            return window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Redirect to mobile page if the device is mobile
+        if (isMobileDevice()) {
+            window.location.href = 'mobile.html';
+        }
+    </script>
 </head>
 <body>
     <header>

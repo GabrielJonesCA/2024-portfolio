@@ -1,3 +1,5 @@
+
+
 // JavaScript Progress Bar for scrolling and "Gabriel" background control
 window.addEventListener('scroll', function() {
     // Total height of the page
