@@ -291,3 +291,93 @@ h2 {
     transform: translate(-80px, -238px);
     
 }
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: #141414;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-heading {
+    font-family: "Righteous", sans-serif;
+    color: white;
+    font-size: 80px; /* Same size as Hello heading */
+    font-weight: 200;
+    margin-right: 20px;
+    line-height: 1;
+    width: 300px;
+    text-align: right;
+}
+
+.contact-box {
+    background-color: #00dbc9;
+    padding: 20px;
+    width: 350px; /* Fixed width like the Hello section */
+    height: 350px; /* Fixed height like the Hello section */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 100px 0; 
+}
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%
+     /* Fixed height like the Hello section */
+}
+
+.contact-box label {
+    margin-bottom: 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+}
+
+.contact-box input[type="email"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+}
+
+.contact-box textarea {
+    width: 103%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    height: 150px;
+    
+}
+
+.contact-box button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #ff5c8a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-box button:hover {
+    background-color: #ff7799;
+}

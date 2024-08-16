@@ -84,9 +84,24 @@
 
         <!-- Section 3: Contact Me -->
         <section class="contact-section">
-            <h2>Contact Me</h2>
-            <div class="square"></div>
+            <div class="contact-container">
+                <h2 class="contact-heading">Contact me</h2>
+                <div class="contact-box">
+                    <form action="https://formspree.io/f/xkgwzznr" method="POST">
+                        <label>
+                            Your email:
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>
+                            Your message:
+                            <textarea name="message" required></textarea>
+                        </label>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <script src="main.js"></script>
