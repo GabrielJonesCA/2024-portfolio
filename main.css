@@ -17,7 +17,7 @@ h1 {
     font-size: 100px;
     line-height: 1.1;
     margin: 0;
-    text-align: right; /* Align text to the left */
+    text-align: right; /* Align text to the right */
 }
 
 header {
@@ -31,47 +31,46 @@ header {
 .header-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align text to the right within the column */
+    align-items: flex-end;
     justify-content: center;
     margin-right: 20px;
-    margin-top: -180px; /* Add space between text and image */
+    margin-top: -180px;
 }
 
 .portrait-container {
     position: relative;
     top: -60px;
-     /* Relative position so child elements can be positioned absolutely */
+    z-index: 2; /* Ensure the portrait container is above the square */
 }
 
 .portrait {
-    width: 350px; /* Make the image larger */
+    width: 350px;
     height: 350px;
     object-fit: cover;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Adding shadow to separate from the background */
-    position: relative; /* Ensure it's above the square */
-    z-index: 2; /* Ensure the image is on top */
+    position: relative;
+    z-index: 3; /* Ensure the image is on top of everything, including the square */
     margin-top: 150px; /* Lower the image slightly */
 }
 
-/* The square behind the image */
 .square-behind {
     position: absolute;
-    width: 350px; /* Larger to match the new image size */
+    width: 350px;
     height: 350px;
-    background-color: #00dbc9; /* The color of the square */
-    top: 135px; /* Offset to the top */
-    right: -15px; /* Offset to the right */
-    z-index: 1; /* Ensure it's behind the image */
+    background-color: #00dbc9;
+    top: 135px; /* Keep the square in the same place */
+    right: -15px;
+    z-index: 1; /* Ensure the square stays behind the image */
 }
 
 .header-info-wrapper {
     position: relative;
-    left: -80px; /* Move this section 200px to the left */
+    left: -80px;
 }
 
 header h2 {
     font-family: "Outfit", sans-serif;
-    color: white; /* Keep the color white */
+    color: white;
     font-size: 30px;
     margin-top: 10px;
     text-align: center;
@@ -84,17 +83,201 @@ header h2 {
 }
 
 .social-icons img {
-    width: 40px; /* Uniform size for both icons */
+    width: 40px;
     height: 40px;
-    margin: 0 15px; /* Space between the icons */
+    margin: 0 15px;
     display: inline-block;
-    border-radius: 50%; /* Make the icons circular */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
 }
 
-/* Hover effect for both GitHub and LinkedIn icons */
 .social-icons img:hover {
-    box-shadow: 0 0 15px #00dbc9; /* Add a circular glow effect */
-    transition: box-shadow 0.3s ease; /* Smooth transition */
-    border-radius: 50%; /* Ensure the shadow follows the circular shape */
+    box-shadow: 0 0 15px #00dbc9;
+    transition: box-shadow 0.3s ease;
+    border-radius: 50%;
+}
+
+/* Section Styling */
+section {
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+}
+
+/* Square styling */
+.square {
+    width: 350px;
+    height: 350px;
+    background-color: #00dbc9;
+    margin: 30px auto;
+}
+
+.square-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between the squares */
+}
+
+/* Section headers */
+h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Hello Section */
+.hello-section {
+    display: flex;
+    justify-content: center; /* Center the entire hello container */
+    align-items: center;
+    padding: 0px 0;
+    background-color: #141414;
+}
+
+/* Ensure the Hello text and square stay together */
+.hello-container {
+    display: flex;
+    align-items: stretch; /* Keep them stuck together */
+    width: 700px; /* Fixed width to prevent resizing */
+}
+
+.hello-box {
+    background-color: #00dbc9;
+    padding: 0px 20px 20px 20px; /* Reduce the top padding to move the text up */
+    width: 350px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    color: white;
+    font-size: 24px;
+    line-height: 1.3; /* Reduced line-height to bring lines closer */
+    text-align: left; /* Left-align the text */
+}
+
+.hello-box p {
+    margin-bottom: 20px;
+    font-family: "Outfit", sans-serif;
+}
+
+.hello-box span {
+    color: #ff5f5f; /* Highlighted text in red/pink */
+    font-weight: bold;
+}
+
+/* Styling for the links */
+.hello-box a {
+    color: #ff5c8a; /* Apply custom link color */
+    text-decoration: none; /* Remove underline */
+    font-family: "Outfit", sans-serif; /* Retain the font style */
+    font-weight: bold; /* Keep the bold effect */
+}
+
+.hello-box a:hover {
+    text-decoration: underline; /* Optional: Underline on hover */
+}
+
+.hello-heading {
+    font-family: "Righteous", sans-serif;
+    color: white;
+    font-size: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 1;
+    height: 350px; /* Same height as the square */
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+}
+
+
+/* Hobbies Section *//* Hobbies Section *//* Hobbies Section *//* Hobbies Section *//* Hobbies Section *//* Hobbies Section *//* Hobbies Section *//* Hobbies Section */
+
+/* Hobbies Section */
+.hobbies-section {
+    padding: 0px 20px;
+    background-color: #141414;
+    color: white;
+}
+
+/* Center all content as a single block */
+.hobbies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Make the hobbies heading part of the centered block */
+.hobbies-heading {
+    font-family: "Righteous", sans-serif;
+    color: white;
+    font-size: 100px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Align the text and game dev box side by side */
+.hobby-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Move Game Development text, box, and header 60px to the left */
+.game-development {
+    transform: translateX(-60px);
+}
+
+/* Text block aligned to the left of the game dev box */
+.hobbies-text {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    margin-right: 100px;
+    width: 200px;
+}
+
+/* Each hobby box, with its title on top of the square */
+.hobby-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.hobby-title-g-d {
+    position: absolute;
+    top: -55px;
+    left: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    text-align: left;
+}
+
+.hobby-title-m-v {
+    position: absolute;
+    top: -85px;
+    left: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    text-align: left;
+}
+
+.hobby-square {
+    width: 100%;
+    height: 100%;
+    background-color: #00dbc9;
+}
+
+/* Move Game Development box to the right */
+.game-development {
+    transform: translateX(100px); /* Move the Game Development group 60px to the left */
+}
+
+/* Move Music & Video Production box down 60px and left 60px */
+.music-video {
+    transform: translate(-60px, 60px);
 }
