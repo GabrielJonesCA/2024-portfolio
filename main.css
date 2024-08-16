@@ -226,18 +226,13 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Move Game Development text, box, and header 60px to the left */
-.game-development {
-    transform: translateX(-60px);
-}
-
 /* Text block aligned to the left of the game dev box */
 .hobbies-text {
     font-family: "Outfit", sans-serif;
     font-size: 20px;
     line-height: 1.5;
     text-align: left;
-    margin-right: 100px;
+    margin-right: 200px;
     width: 200px;
 }
 
@@ -274,10 +269,25 @@ h2 {
 
 /* Move Game Development box to the right */
 .game-development {
-    transform: translateX(100px); /* Move the Game Development group 60px to the left */
+    transform: translateX(50px);
+    z-index: 2; /* Move the Game Development group 60px to the left */
 }
 
 /* Move Music & Video Production box down 60px and left 60px */
 .music-video {
-    transform: translate(-60px, 60px);
+    transform: translate(-150px, 60px);
+}
+
+/* GAME SECTION*/
+
+.game{
+    z-index: 3;
+    transform: translate(-165px, -240px);
+    
+}
+
+.music-video-embed{
+    z-index: 3;
+    transform: translate(-80px, -238px);
+    
 }
